@@ -11,8 +11,8 @@ void processImage(Mat &frame)
 	// threshold(frame, frame, thres, 255, cv::THRESH_BINARY);
 	int width = frame.cols;
 	int height = frame.rows;
-	dlib::point dp1(cols/4, rows/4);
-	cv::Rect rec(dp1.x(),dp1,y(),cols/2,rows/2);
+	dlib::point dp1(frame.cols/4, frame.rows/4);
+	cv::Rect rec(dp1.x(),dp1.y(),frame.cols/2,frame.rows/2);
 	cv::rectangle(frame, rec, cv::Scalar(0, 0, 255));
 	return;
 }
