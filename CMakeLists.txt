@@ -15,7 +15,7 @@ file(GLOB SOURCES "src/*.cpp")
 
 add_executable(demo ${SOURCES})
 target_link_libraries(demo ${OpenCV_LIBS})
-TARGET_LINK_LIBRARIES(demo dlib::dlib)
+target_link_libraries(demo dlib::dlib)
 
 #Copy all files in img/ to build directory after make
 add_custom_command(TARGET demo POST_BUILD
